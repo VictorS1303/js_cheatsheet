@@ -181,7 +181,10 @@ const currentPage = new URL(Astro.request.url).pathname
         overlay.classList.toggle('active')
         updateMobileMenuToggleIcon()
 
-        mainNav.classList.contains('active') ? disable() : enable()        
+        if(mainNav.classList.contains('active'))
+        {
+            enable()
+        }       
     }
 
     function updateMobileMenuToggleIcon()
